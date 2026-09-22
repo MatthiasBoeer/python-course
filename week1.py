@@ -67,5 +67,5 @@ def task_4c(zahl):
     return out
 
 if __name__ == '__main__':
-    zahl = int(input("Calculate factorial of: "))
-    print(task_4c(zahl))
+    input_number = int(input("Calculate factorial of: "))
+    print(task_4c(input_number))
