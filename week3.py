@@ -68,7 +68,37 @@ def task9():
     print(np.array_equal(random_one, random_two))
 
 def task10():
-    random_x = np.random.random((100,2))
+    random = np.random.random((100,2))
+    X = np.atleast_2d(random[:,0])
+    Y = np.atleast_2d(random[:,1])
+    distance = np.sqrt((X-X.T)**2 + (Y-Y.T)**2)
+    print(distance)
+
+def task11():
+    A = np.random.randint(-5,5,25).reshape(5,5)
+    print(A)
+    B = A - A.mean(axis=1)[:,np.newaxis]
+    print(B)
+
+def task12():
+    A = np.random.randint(-5,5,(5,5))
+    print(A)
+    B = A.argsort()
+    print(B)
+
+def task13():
+    A = np.random.randint(-5,5,(5,5))
+    print(A)
+    rank = np.linalg.matrix_rank(A)
+    print(rank)
+
+def task14():
+    A = np.random.randint(-5,5,(16,16))
+    print("A= ", A)
+    B = A.reshape(4,4,4,4)
+    print("B= ", B)
+    C = B.sum(axis=(1,3))
+    print("C= ", C)
 
 def main():
     # task1()
@@ -79,7 +109,12 @@ def main():
     # task6()
     # task7()
     # task8()
-    task9()
+    # task9()
+    # task10()
+    # task11()
+    # task12()
+    # task13()
+    task14()
 
 
 if __name__ == "__main__":
